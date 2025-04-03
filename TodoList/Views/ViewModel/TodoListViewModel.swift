@@ -108,14 +108,15 @@ class TodoListViewModel {
            Task {
                
                do {
-                   
-                   // Run the update command
-                   try await supabase
+                   let results:[TodoItem] = try await supabase
                        .from("todos")
-                       .update(updatedTodo)
-                       .eq("id", value: updatedTodo.id!)   // Only update the row whose id
-                       .execute()                          // matches that of the to-do being deleted
-                       
+                       .select()
+                       .order("id", ascending: true)
+                       .execute()
+                       .value
+                   
+                   self.todos = results
+                   
                } catch {
                    debugPrint(error)
                }
