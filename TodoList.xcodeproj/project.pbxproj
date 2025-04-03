@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CF245372D9EBF0D004732F7 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 1CF245362D9EBF0D004732F7 /* Auth */; };
+		1CF245392D9EBF0D004732F7 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 1CF245382D9EBF0D004732F7 /* Functions */; };
+		1CF2453B2D9EBF0D004732F7 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 1CF2453A2D9EBF0D004732F7 /* PostgREST */; };
+		1CF2453D2D9EBF0D004732F7 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 1CF2453C2D9EBF0D004732F7 /* Realtime */; };
+		1CF2453F2D9EBF0D004732F7 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 1CF2453E2D9EBF0D004732F7 /* Storage */; };
+		1CF245412D9EBF0D004732F7 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 1CF245402D9EBF0D004732F7 /* Supabase */; };
 		814A08FC2BC41BC500921E4F /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A08FB2BC41BC500921E4F /* ItemView.swift */; };
 		814A08FE2BC41C7800921E4F /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A08FD2BC41C7800921E4F /* TodoItem.swift */; };
 		815D9D7D2BC413800050957E /* TodoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815D9D7C2BC413800050957E /* TodoListApp.swift */; };
@@ -34,6 +40,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CF2453B2D9EBF0D004732F7 /* PostgREST in Frameworks */,
+				1CF245392D9EBF0D004732F7 /* Functions in Frameworks */,
+				1CF245412D9EBF0D004732F7 /* Supabase in Frameworks */,
+				1CF245372D9EBF0D004732F7 /* Auth in Frameworks */,
+				1CF2453F2D9EBF0D004732F7 /* Storage in Frameworks */,
+				1CF2453D2D9EBF0D004732F7 /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +161,9 @@
 				Base,
 			);
 			mainGroup = 815D9D702BC413800050957E;
+			packageReferences = (
+				1CF245352D9EBF0D004732F7 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = 815D9D7A2BC413800050957E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -386,6 +401,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1CF245352D9EBF0D004732F7 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1CF245362D9EBF0D004732F7 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CF245352D9EBF0D004732F7 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		1CF245382D9EBF0D004732F7 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CF245352D9EBF0D004732F7 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		1CF2453A2D9EBF0D004732F7 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CF245352D9EBF0D004732F7 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		1CF2453C2D9EBF0D004732F7 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CF245352D9EBF0D004732F7 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		1CF2453E2D9EBF0D004732F7 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CF245352D9EBF0D004732F7 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		1CF245402D9EBF0D004732F7 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CF245352D9EBF0D004732F7 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 815D9D712BC413800050957E /* Project object */;
 }
